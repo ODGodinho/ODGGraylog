@@ -1,0 +1,38 @@
+{
+    "compilerOptions": {
+        "baseUrl": ".",
+        "outDir": "./dist",
+        "paths": {
+            "#types": [ "./@types" ],
+            "#types/*": [ "./@types/*" ],
+            "@configs": [ "./src/Configs" ],
+            "@configs/*": [ "./src/Configs/*" ],
+            "@enums": [ "./src/app/Enums" ],
+            "@enums/*": [ "./src/app/Enums/*" ],
+            "@factory": [ "./src/app/Factory" ],
+            "@factory/*": [ "./src/app/Factory/*" ],
+            "@interfaces": [ "./src/Interfaces" ],
+            "@interfaces/*": [ "./src/Interfaces/*" ],
+            "@listeners": [ "./src/app/Listeners" ],
+            "@listeners/*": [ "./src/app/Listeners/*" ],
+            "@services": [ "./src/app/Services" ],
+            "@services/*": [ "./src/app/Services/*" ],
+            "~/*": [ "./src/*" ]
+        },
+        "rootDirs": [
+            ".",
+            "./src"
+        ],
+        "typeRoots": [
+            "./src/@types",
+            "node_modules/@types"
+        ],
+        "types": [ "node" ]
+    },
+    "exclude": [
+        "node_modules/",
+        "dist/"
+    ],
+    "extends": "@odg/tsconfig/tsconfig.node.json",
+    "include": [ "." ]
+}

@@ -1,0 +1,84 @@
+{
+    "name": "stanley-the-template-typescript",
+    "version": "0.0.0",
+    "description": "Stanley TheTemplate for typescript project",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "homepage": "https://github.com/ODGodinho/Stanley-TheTemplate-Typescript",
+    "scripts": {
+        "build": "rimraf dist/ && tsc --project ./tsconfig.build.json && tsc-alias -p tsconfig.build.json",
+        "build:watch": "npm run build && (concurrently \"tsc --project ./tsconfig.build.json -w\" \"tsc-alias -p tsconfig.build.json -w\")",
+        "dev": "tsx --env-file=.env ./src/index.ts",
+        "start": "node --env-file=.env ./dist/index.js",
+        "start:build": "yarn build && node --env-file=.env ./dist/index.js",
+        "lint": "eslint --ext .js,.jsx,.ts,.tsx,.json,.jsonc,.json5,.yml,.yaml,.xml,.txt,.svg,.properties,.gradle,.java,.cpp,.c,.cs,.html,.css,.groovy,.gitignore,.npmignore,.toml,.env,.example,.sample,.ini,.php,.bat,.powershell,.ps1,.sh,.bash,.eslintrc",
+        "lint:fix": "eslint --ext .js,.jsx,.ts,.tsx,.json,.jsonc,.json5,.yml,.yaml,.xml,.txt,.svg,.properties,.gradle,.java,.cpp,.c,.cs,.html,.css,.groovy,.gitignore,.npmignore,.toml,.env,.example,.sample,.ini,.php,.bat,.powershell,.ps1,.sh,.bash,.eslintrc --fix",
+        "prepare": "husky",
+        "test": "vitest run",
+        "test:ci": "vitest run --passWithNoTests",
+        "test:watch": "vitest --watch"
+    },
+    "publishConfig": {
+        "access": "public"
+    },
+    "lint-staged": {
+        "*": [ "npm run lint:fix" ]
+    },
+    "release": {
+        "branches": [
+            "+([0-9])?(.{+([0-9]),x}).x",
+            "main",
+            "master",
+            "next",
+            "next-major",
+            {
+                "name": "beta",
+                "prerelease": true
+            },
+            {
+                "name": "alpha",
+                "prerelease": true
+            }
+        ],
+        "plugins": [
+            "@semantic-release/commit-analyzer",
+            "@semantic-release/release-notes-generator",
+            "@semantic-release/npm",
+            "@semantic-release/github"
+        ]
+    },
+    "files": [
+        "./dist/",
+        "./README.md"
+    ],
+    "author": "Dragons Gamers <https://www.linkedin.com/in/victor-alves-odgodinho>",
+    "license": "MIT",
+    "devDependencies": {
+        "@odg/eslint-config": "*",
+        "@odg/tsconfig": "*",
+        "@types/node": ">=22",
+        "@vitest/coverage-istanbul": "^1",
+        "concurrently": "^9.2.0",
+        "eslint": "*",
+        "husky": "^9.1.7",
+        "lint-staged": "^16.1.2",
+        "rimraf": "*",
+        "tsc-alias": "^1.8.16",
+        "tsx": "^4.20.3",
+        "typescript": "^5.8.3",
+        "vite-tsconfig-paths": "*",
+        "vitest": "^1"
+    },
+    "dependencies": {
+        "@odg/axios": "^1.11.0",
+        "@odg/chemical-x": "^1.24.0",
+        "@odg/config": "^1.1.2",
+        "@odg/events": "^1.2.0",
+        "@odg/json-log": "^1.4.1",
+        "@odg/log": "^1.6.1",
+        "inversify": "^6",
+        "inversify-binding-decorators": "^4.0.0",
+        "reflect-metadata": "^0.2.2",
+        "zod": "^3.25.74"
+    }
+}
