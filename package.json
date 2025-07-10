@@ -1,7 +1,7 @@
 {
-    "name": "stanley-the-template-typescript",
+    "name": "@odg/graylog",
     "version": "0.0.0",
-    "description": "Stanley TheTemplate for typescript project",
+    "description": "graylog logs with @odg/logs",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
     "homepage": "https://github.com/ODGodinho/Stanley-TheTemplate-Typescript",
@@ -70,15 +70,9 @@
         "vitest": "^1"
     },
     "dependencies": {
-        "@odg/axios": "^1.11.0",
-        "@odg/chemical-x": "^1.24.0",
-        "@odg/config": "^1.1.2",
-        "@odg/events": "^1.2.0",
-        "@odg/json-log": "^1.4.1",
+        "@odg/exception": "^1.7.1",
         "@odg/log": "^1.6.1",
-        "inversify": "^6",
-        "inversify-binding-decorators": "^4.0.0",
-        "reflect-metadata": "^0.2.2",
-        "zod": "^3.25.74"
+        "flat": "^6.0.1",
+        "gelf-pro": "^1.4.0"
     }
 }
