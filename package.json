@@ -57,7 +57,7 @@
         "@odg/eslint-config": "*",
         "@odg/tsconfig": "*",
         "@types/node": ">=22",
-        "@vitest/coverage-istanbul": "^1",
+        "@vitest/coverage-istanbul": "^3",
         "concurrently": "^9.2.0",
         "eslint": "*",
         "husky": "^9.1.7",
@@ -67,7 +67,7 @@
         "tsx": "^4.20.3",
         "typescript": "^5.8.3",
         "vite-tsconfig-paths": "*",
-        "vitest": "^1"
+        "vitest": "^3"
     },
     "dependencies": {
         "@odg/exception": "^1.7.1",
