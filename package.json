@@ -76,7 +76,7 @@
         "@odg/events": "^1.2.0",
         "@odg/json-log": "^1.4.1",
         "@odg/log": "^1.6.1",
-        "inversify": "^6",
+        "inversify": "^7",
         "inversify-binding-decorators": "^4.0.0",
         "reflect-metadata": "^0.2.2",
         "zod": "^3.25.74"
